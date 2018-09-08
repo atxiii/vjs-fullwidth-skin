@@ -1,0 +1,276 @@
+#my-player{
+	width:100vw; 
+	position: relative;
+	overflow: hidden;
+    touch-action: manipulation;
+    -ms-high-contrast-adjust: none;	
+	cursor: pointer;
+} 
+.video-js-box{position:relative}
+
+.my-player-dimensions {
+    height: max-content !important;
+}
+
+.vjs-fullwidth-skin {
+  color: white; }
+.vjs-fullwidth-skin div[rol='slider']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background: #FFF;
+    height:15px;
+    width:15px;
+	border-radius:100%;
+	cursor:pointer;
+}
+
+  .vjs-fullwidth-skin .vjs-poster:focus, .vjs-fullwidth-skin .vjs-control:focus {
+    outline: none; 
+	background-color:transparent;
+	}
+  .vjs-fullwidth-skin .vjs-big-play-button:focus {
+	  outline: none; 
+  }
+  .vjs-fullwidth-skin .vjs-big-play-button {
+	 background: url(https://www.millionairium.com/wp-content/themes/millionairium/assets/images/video-btn.png);
+    line-height: 50px;
+    margin: -25px;
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height:85px;
+    width: 85px;
+	background-repeat: no-repeat;
+	background-color:transparent;
+	border:none;
+    -webkit-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    z-index: 2; }
+
+  .vjs-fullwidth-skin.vjs-controls-disabled .vjs-big-play-button, .vjs-fullwidth-skin.vjs-has-started .vjs-big-play-button, .vjs-fullwidth-skin.vjs-using-native-controls .vjs-big-play-button {
+    opacity: 0;
+    pointer-events: none; 
+	background-color:transparent;
+	}
+  .vjs-fullwidth-skin .vjs-control-bar {
+    height: 50px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2; }
+  .vjs-fullwidth-skin.vjs-has-started .vjs-control-bar {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 100ms cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+	background-color:transparent;
+	width: 80%;
+    margin: 0 auto;
+	background:rgba(0,0,0,.5);
+	}
+  .vjs-fullwidth-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    opacity: 0;
+    -webkit-transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    -moz-transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+  .vjs-fullwidth-skin.vjs-has-started .vjs-poster {
+    display: none; background-color:transparent;}
+  .vjs-fullwidth-skin.vjs-using-native-controls .vjs-control-bar, .vjs-fullwidth-skin.vjs-controls-disabled .vjs-control-bar {
+    display: none; }
+  .vjs-fullwidth-skin .vjs-progress-control {
+    position: absolute;
+    top: 0;
+    right: 95px;
+    bottom: 0;
+    left: 50px; }
+    .vjs-fullwidth-skin .vjs-progress-control .vjs-progress-holder {
+      cursor: pointer;
+      height: 20px;
+      margin-top: -10px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0; }
+      .vjs-fullwidth-skin .vjs-progress-control .vjs-progress-holder:after {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 2px;
+        content: "";
+        display: block;
+        height: 4px;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0; }
+    .vjs-fullwidth-skin .vjs-progress-control .vjs-play-progress {
+      background-color:white;
+      border-radius: 2px;
+      height: 4px;
+      margin-top: -2px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      left: 0; }
+	  
+  .vjs-fullwidth-skin .vjs-paused {
+	  cursor: pointer;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDMxNC4wNjggMzE0LjA2OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzE0LjA2OCAzMTQuMDY4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPGcgaWQ9Il94MzNfNTYuX1BsYXkiPgoJCTxnPgoJCQk8cGF0aCBkPSJNMjkzLjAwMiw3OC41M0MyNDkuNjQ2LDMuNDM1LDE1My42MTgtMjIuMjk2LDc4LjUyOSwyMS4wNjhDMy40MzQsNjQuNDE4LTIyLjI5OCwxNjAuNDQyLDIxLjA2NiwyMzUuNTM0ICAgICBjNDMuMzUsNzUuMDk1LDEzOS4zNzUsMTAwLjgzLDIxNC40NjUsNTcuNDdDMzEwLjYyNywyNDkuNjM5LDMzNi4zNzEsMTUzLjYyLDI5My4wMDIsNzguNTN6IE0yMTkuODM0LDI2NS44MDEgICAgIGMtNjAuMDY3LDM0LjY5Mi0xMzYuODk0LDE0LjEwNi0xNzEuNTc2LTQ1Ljk3M0MxMy41NjgsMTU5Ljc2MSwzNC4xNjEsODIuOTM1LDk0LjIzLDQ4LjI2ICAgICBjNjAuMDcxLTM0LjY5LDEzNi44OTQtMTQuMTA2LDE3MS41NzgsNDUuOTcxQzMwMC40OTMsMTU0LjMwNywyNzkuOTA2LDIzMS4xMTcsMjE5LjgzNCwyNjUuODAxeiBNMjEzLjU1NSwxNTAuNjUybC04Mi4yMTQtNDcuOTQ5ICAgICBjLTcuNDkyLTQuMzc0LTEzLjUzNS0wLjg3Ny0xMy40OTMsNy43ODlsMC40MjEsOTUuMTc0YzAuMDM4LDguNjY0LDYuMTU1LDEyLjE5MSwxMy42NjksNy44NTFsODEuNTg1LTQ3LjEwMyAgICAgQzIyMS4wMjksMTYyLjA4MiwyMjEuMDQ1LDE1NS4wMjYsMjEzLjU1NSwxNTAuNjUyeiIgZmlsbD0iI0ZGRkZGRiIvPgoJCTwvZz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+  }
+  .vjs-fullwidth-skin .vjs-playing {
+	  cursor: pointer;
+	background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDUxMCA1MTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMCA1MTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0icGF1c2UtY2lyY2xlLW91dGxpbmUiPgoJCTxwYXRoIGQ9Ik0xNzguNSwzNTdoNTFWMTUzaC01MVYzNTd6IE0yNTUsMEMxMTQuNzUsMCwwLDExNC43NSwwLDI1NXMxMTQuNzUsMjU1LDI1NSwyNTVzMjU1LTExNC43NSwyNTUtMjU1UzM5NS4yNSwwLDI1NSwweiAgICAgTTI1NSw0NTljLTExMi4yLDAtMjA0LTkxLjgtMjA0LTIwNFMxNDIuOCw1MSwyNTUsNTFzMjA0LDkxLjgsMjA0LDIwNFMzNjcuMiw0NTksMjU1LDQ1OXogTTI4MC41LDM1N2g1MVYxNTNoLTUxVjM1N3oiIGZpbGw9IiNGRkZGRkYiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+  }
+  
+  .vjs-fullwidth-skin .vjs-play-control {
+    cursor: pointer;
+	margin-top: -8px;
+    position: absolute;
+    top: 44%;
+    left: 20px;
+    height: 24px;
+    width: 24px; 
+	border:none;
+	background-color:transparent;
+	}
+  .vjs-fullwidth-skin.vjs-playing .vjs-play-control:before, .vjs-fullwidth-skin.vjs-playing .vjs-play-control:after {
+   
+    border: none;
+    background-color:transparent;
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px; }
+  .vjs-fullwidth-skin.vjs-playing .vjs-play-control:after {
+    left: auto;
+    right: 0; }
+  .vjs-fullwidth-skin .vjs-fullscreen-control {
+    border: 3px solid white;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    height: 14px;
+	background:transparent;
+    width: 22px;
+	display:none;
+	}
+  .vjs-fullwidth-skin.vjs-fullscreen .vjs-fullscreen-control {
+    background: white; }
+    .vjs-fullwidth-skin.vjs-fullscreen .vjs-fullscreen-control:after {
+      background: black;
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      width: 5px; }
+  .vjs-fullwidth-skin .vjs-volume-control {
+    cursor: pointer;
+    margin-top: -7px;
+    position: absolute;
+    top: 50%;
+    right: 35px;
+    height: 14px;
+    width: 44px; }
+  .vjs-fullwidth-skin .vjs-volume-bar {
+    background: url(../images/vol2.png);
+    background-size: 44px 14px;
+    height: 100%;
+    width: 100%; 
+	background-color: transparent;
+	}
+  .vjs-fullwidth-skin .vjs-volume-level {
+    background: url(../images/vol1.png);
+    background-size: 44px 14px;
+    height: 100%; 
+	background-color: transparent;
+	}
+  .vjs-fullwidth-skin .vjs-current-time,
+  .vjs-fullwidth-skin .vjs-time-divider,
+  .vjs-fullwidth-skin .vjs-duration,
+  .vjs-fullwidth-skin .vjs-remaining-time,
+  .vjs-fullwidth-skin .vjs-load-progress,
+  .vjs-fullwidth-skin .vjs-play-progress .vjs-control-text,
+  .vjs-fullwidth-skin .vjs-play-control .vjs-control-content,
+  .vjs-fullwidth-skin .vjs-fullscreen-control .vjs-control-text,
+  .vjs-fullwidth-skin .vjs-slider-handle,
+  .vjs-fullwidth-skin .vjs-time-tooltip,
+  .vjs-fullwidth-skin .vjs-control-text,
+  .vjs-fullwidth-skin .vjs-time-tooltip,
+  .vjs-fullwidth-skin .vjs-volume-handle,
+  .vjs-fullwidth-skin .vjs-live-controls,
+  .vjs-fullwidth-skin .vjs-playback-rate,
+  .vjs-fullwidth-skin .vjs-subtitles-button,
+  .vjs-fullwidth-skin .vjs-captions-button,
+  .vjs-fullwidth-skin .vjs-mute-control,
+  .vjs-fullwidth-skin .vjs-hidden {
+    display: none !important;  }
+
+.video-js {
+  background-color: black;
+  padding: 0;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle; }
+.video-js .vjs-tech {
+    width: 100%; 
+	}
+.my-player-dimensions{
+	width: 100%;
+}
+  .video-js:-moz-full-screen {
+    position: absolute; }
+  .video-js.vjs-fullscreen {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100% !important;
+    height: 100% !important; }
+  .video-js:-webkit-full-screen {
+    width: 100% !important;
+    height: 100% !important; }
+  .video-js.vjs-fullscreen.vjs-user-inactive {
+    cursor: none; }
+
+body.vjs-full-window {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  padding: 0; }
+
+.vjs-poster {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  cursor: pointer;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%; }
+  .vjs-poster img {
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    padding: 0;
+    width: 100%; }
+  .video-js.vjs-using-native-controls .vjs-poster {
+    display: none; }
